@@ -2,13 +2,15 @@ const path = require('path');
 const htmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    mode: 'development', // 使い分ける予定も特にないので一旦developmentを設定
+    mode: 'production',
     context: path.join(__dirname, 'src'),
-    entry: './index.tsx',
+    entry: {
+      index: './index.tsx'
+    },
     output: {
         path: path.join(__dirname, 'dist'),
         filename: 'bundle.js',
-        publicPath: '/',
+        publicPath: './',
     },
     module: {
         rules: [

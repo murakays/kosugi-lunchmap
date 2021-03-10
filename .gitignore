@@ -12,3 +12,9 @@
 
 # node_modules
 /clients/node_modules
+
+# log
+/clients/*.log
+
+# dist
+/clients/dist
